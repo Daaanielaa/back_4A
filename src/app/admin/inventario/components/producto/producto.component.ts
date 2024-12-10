@@ -26,7 +26,7 @@ export class ProductoComponent {
   cols:any[]=[];
   constructor(){
 
-    this.productoService.funListar().subscribe(
+    this.productoService.funListar2().subscribe(
       (res:any)=>{
         this.products=res.data
       }

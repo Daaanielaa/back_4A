@@ -1,9 +1,7 @@
 <div class="card px-6 py-6">
     <h1>Producto</h1>
 
-    <!-- Barra de herramientas -->
     <p-toolbar styleClass="mb-4">
-        <!-- Dropdown para filtrar categorías -->
         <p-dropdown 
             [options]="categorias" 
             optionLabel="name" 
@@ -12,7 +10,6 @@
         </p-dropdown>
         <ng-template pTemplate="left">
             <div class="my-2">
-                <!-- Botón Exportar -->
                 <button 
                     pButton 
                     pRipple 
@@ -24,10 +21,7 @@
             </div>
         </ng-template>
     </p-toolbar>
-
-   <!-- Tabla de productos -->
 <p-table #dt [value]="products" [paginator]="true" [rows]="10" [responsiveLayout]="'scroll'">
-    <!-- Encabezados dinámicos -->
     <ng-template pTemplate="header">
         <tr>
             <th>ID</th>
@@ -39,8 +33,6 @@
             <th>Acciones</th>
         </tr>
     </ng-template>
-
-    <!-- Celdas dinámicas -->
     <ng-template pTemplate="body" let-product>
         <tr>
             <td>{{ product.id }}</td>

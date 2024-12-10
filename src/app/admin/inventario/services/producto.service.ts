@@ -9,7 +9,7 @@ export class ProductoService {
   private baseUrl = environment.urlServidor
   private http=inject(HttpClient)
 
-  funListar(){
+  funListar2(){
     return this.http.get(`${this.baseUrl}/producto/back`)
   }
 
